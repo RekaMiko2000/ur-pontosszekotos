@@ -45,7 +45,6 @@ if __name__=="__main__":
     numbers_path=number_recog.assign_num_to_pic(2)
     numbers=number_recog.search_for_all(numbers_path,resized)
     points_closest=get_closest_points.return_points_coords(numbers,points)
-    #contour_points.contour_points(resized,points_closest)
     center_coords_mm={}
     for key in points_closest:
         center_coords_mm[key]=[
@@ -61,6 +60,4 @@ if __name__=="__main__":
     filename=filename.replace(".png","")
     filename_for_coords=f"coordinates_for_dots-{filename}.txt"
     write_to_file.write_to_file(robot_coords, filename_for_coords)
-    print(filename_for_coords)
-    #socket.draw(filename_for_coords)
     
