@@ -25,12 +25,12 @@ def search_for_all(file_names,img):
                     numbers[file_name]=matchLoc
                 cv.rectangle(img_rgb, matchLoc, (matchLoc[0] + w, matchLoc[1] + h), (0,0,0), 2)
                 cv.rectangle(res, matchLoc, (matchLoc[0] + w, matchLoc[1] + h), (0,0,0), 2)
-            cv.imshow("result",img_rgb)
-            cv.waitKey(0)
+            #cv.imshow("result",img_rgb)
+            #cv.waitKey(0)
         else:
             continue
-    #cv.imshow("result",img_rgb)
-    #cv.waitKey(0)
+    cv.imshow("result",img_rgb)
+    cv.waitKey(0)
     return numbers
 
 def assign_num_to_pic(template_num):
